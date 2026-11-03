@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ###
-GET  http://127.0.0.1:8000/questions/3/
+GET  http://127.0.0.1:8000/questions/1/
 Accept: application/json 
 
 
@@ -37,5 +37,44 @@ Content-Type: application/json
 
 ###
 DELETE http://127.0.0.1:8000/questions/5/
+
+#_______________________________________________________________
+
+
+
+###
+GET http://127.0.0.1:8000/submissions/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/submissions/
+Content-Type: application/json
+
+{
+    "student_name":"Arun",
+    "student_email":"arun@gmail.com",
+    "question_id" : 1,
+    "selected_answer":"option_c"
+}
+
+
+
+###
+GET  http://127.0.0.1:8000/submissions/3/
+Accept: application/json
+###
+PUT http://127.0.0.1:8000/submissions/2/
+Content-Type: application/json
+
+{
+  "student_name": "Hiba",
+  "student_email": "hiba@gmail.com",
+  "question_id": 4,
+  "selected_answer": "option_b"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/submissions/3/
 
 
